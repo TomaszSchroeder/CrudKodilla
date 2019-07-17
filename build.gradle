@@ -28,9 +28,10 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compileOnly ('org.projectlombok:lombok:1.18.8')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	//compile('mysql:mysql-connector-java')
-	// dodany:
-	compile('org.postgresql:postgresql')
+	// dodany pod pierwszą wersję apki
+	compile('mysql:mysql-connector-java')
+	// dodany pod heroku:
+	// compile('org.postgresql:postgresql')
 	testImplementation ('org.springframework.boot:spring-boot-starter-test')
 
 	//providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
