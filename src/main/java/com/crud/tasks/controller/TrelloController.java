@@ -35,17 +35,6 @@ public class TrelloController {
 
         });
 
-        //trelloBoards.forEach(trelloBoardDto -> System.out.println(trelloBoardDto.getId() + " " + trelloBoardDto.getName()));
-
-// kod do zadania 22.2
-//        trelloBoards.stream().filter(board -> board.getName().contains("Kodilla"))
-//                .filter(board -> (board.getId() != null && !board.getId().equals("")))
-//                .filter(board -> (board.getName() != null && !board.getName().equals("")))
-//                .forEach(board -> {
-//                    System.out.println("Requested board consists of such list(s): ");
-//                    System.out.println(board.getId() + ". " + board.getName());
-//                });
-
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "createTrelloCard")
