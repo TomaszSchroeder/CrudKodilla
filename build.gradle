@@ -30,7 +30,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	
     // dodany pod pierwszą wersję apki - usuwać przed update'm heroku
-	compile('mysql:mysql-connector-java')
+//	compile('mysql:mysql-connector-java')
 	// dodany pod heroku:
 	 compile('org.postgresql:postgresql')
 	testImplementation ('org.springframework.boot:spring-boot-starter-test')
