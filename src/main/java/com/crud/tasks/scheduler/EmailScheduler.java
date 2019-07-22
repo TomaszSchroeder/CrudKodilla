@@ -13,32 +13,25 @@ public class EmailScheduler {
 
     private static final String SUBJECT = "Tasks: Once a day email";
 
-
     @Autowired
     private SimpleMailService simpleMailService;
 
     @Autowired
     private TaskRepository taskRepository;
 
-    private long size = taskRepository.count();
-
     @Autowired
     private AdminConfig adminConfig;
 
-    @Scheduled(fixedDelay = 20000)
     //@Scheduled(cron = "0 0 10 * * *")
+    @Scheduled(fixedDelay = 20000)
     public void sendInformationEmail() {
+        long size = taskRepository.count();
+        String taskSize = size == 1 ? " task" : " tasks";
         simpleMailService.send(new Mail(
                 adminConfig.getAdminMail(),
                 "",
                 SUBJECT,
-                "Currently in database you got: " + size + tasksQuantity()
+                "Currently in database you got: " + size + taskSize
         ));
-    }
-
-    public String tasksQuantity() {
-        String oneTask = " task";
-        String moreTasks = " tasks";
-        return size == 1 ? oneTask : moreTasks;
     }
 }
