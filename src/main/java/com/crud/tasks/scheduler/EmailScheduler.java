@@ -20,7 +20,7 @@ public class EmailScheduler {
     @Autowired
     private TaskRepository taskRepository;
 
-    long size = taskRepository.count();
+    private long size = taskRepository.count();
 
     @Autowired
     private AdminConfig adminConfig;
